@@ -117,15 +117,9 @@
 <script src="./js/TrackballControls.js"></script>
 <script src="./js/CSS3DRenderer.js"></script>
 
-<!--下面这段代码用来解决不能在ios上自动播放 -->
-<script type="text/javascript">
-        $(function () {
-            $("#audio")[0].play();
-        })
-</script>
 
 <div id="container">
-<audio src="./img/music.mp3" loop="loop" controls autoplay style="display:none;" id="audio"></audio>
+<audio src="./audio/music.mp3"  loop="loop"  controls="controls" preload autoplay="autoplay" style="display:none;"></audio>
 </div>
 <div id="info">For classFriendship to smallSisterJuan</div>
 <div id="menu">
