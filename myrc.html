@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>For friendship to smallSisterSun</title>
+<title>For classFriendship to smallSisterJuan</title>
 
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <style>
@@ -116,19 +116,27 @@
 <script src="./js/tween.min.js"></script>
 <script src="./js/TrackballControls.js"></script>
 <script src="./js/CSS3DRenderer.js"></script>
+
+<!--下面这段代码用来解决不能在ios上自动播放 -->
+<script type="text/javascript">
+        $(function () {
+            $("#audio")[0].play();
+        })
+</script>
+
 <div id="container">
-<audio src="./img/music.mp3" loop="loop" controls autoplay style="display:none;"></audio>
+<audio src="./img/music.mp3" loop="loop" controls autoplay style="display:none;" id="audio"></audio>
 </div>
-<div id="info">For friendship to smallSisterSun</div>
+<div id="info">For classFriendship to smallSisterJuan</div>
 <div id="menu">
-<button id="table">友谊</button>
-<button id="sphere">初见</button>
+<button id="table">同窗</button>
+<button id="sphere">友谊</button>
 <button id="helix">美美哒</button>
 <button id="grid">小姐姐</button>
 </div>
 <div class="show_info animated" style="display:none;">
 <div class="info_my">
-<img src="./img/asl.jpg">
+<img src="./img/alj.jpg">
 <div class="info_mem">
 <div class="nickname">未来可期</div>
 <div class="id">人间值得</div>
@@ -158,7 +166,7 @@
 					$('.show_info').removeClass(_in[rand_in]);
 					// 更改展示的图片
 					var img = document.getElementsByClassName('element')[CurPersonNum].getElementsByTagName('img')[0];
-					img.setAttribute('src','img/bsl.jpg');
+					img.setAttribute('src','img/blj.jpg');
 					++CurPersonNum;
 					setTimeout(function(){
 						$('.show_info').addClass(_out[rand_out]);
@@ -173,7 +181,7 @@
 			// 生成虚拟数据
 	        for(var i=0;i<199;i++){
 				personArray.push({
-		            image: "img/asl.jpg"
+		            image: "img/alj.jpg"
 		        });
 	        }
 
