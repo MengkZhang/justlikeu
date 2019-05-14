@@ -94,6 +94,7 @@
 </head>
 <body>
     <div class="container">
+	<audio src="./audio/music.mp3"  loop="loop"  controls="controls" preload id="music1" autoplay="autoplay" hidden></audio>
         <div class="square">
             <div><img src="images/1.jpg"></div>
             <div><img src="images/2.jpg"></div>
@@ -111,6 +112,20 @@
             heart.style.transform = "rotateY("+i*10+"deg) rotateZ(45deg) translateX(30px)";
             container.appendChild(heart);
         }
+		
+		//添加背景音乐 适配iOS微信浏览器
+		function bf(){
+				var audio = document.getElementById('music1');
+				if(audio!==null){
+				//检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+				//	     alert(audio.paused);
+					if(audio.paused){
+					}
+				}
+			}
+			
+			document.addEventListener("WeixinJSBridgeReady", function () {
+				document.getElementById('music1').play();}, false);
     </script>
 </body>
 </html>
