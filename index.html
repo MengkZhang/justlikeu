@@ -117,7 +117,7 @@
 <script src="./js/TrackballControls.js"></script>
 <script src="./js/CSS3DRenderer.js"></script>
 <div id="container">
-<audio src="./img/music.mp3" loop="loop" controls autoplay style="display:none;"></audio>
+<audio src="./img/music.mp3" loop="loop"  controls="controls" preload id="music1" autoplay="autoplay" hidden></audio>
 </div>
 <div id="info">SomeOneJustLikeU</div>
 <div id="menu">
@@ -131,7 +131,7 @@
 <img src="./img/a3.png">
 <div class="info_mem">
 <div class="nickname">Hello</div>
-<div class="id">高老师</div>
+<div class="id">李老师</div>
 <div class="vote">Hope We Meet</div>
 </div>
 </div>
@@ -558,6 +558,19 @@
 				renderer.render( scene, camera );
 
 			}
+
+			function bf(){
+				var audio = document.getElementById('music1');
+				if(audio!==null){
+				//检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+				//	     alert(audio.paused);
+					if(audio.paused){
+					}
+				}
+			}
+
+			document.addEventListener("WeixinJSBridgeReady", function () {
+				document.getElementById('music1').play();}, false);
 
 		</script>
 
